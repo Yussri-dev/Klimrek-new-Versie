@@ -1,0 +1,79 @@
+{
+    "errors": [],
+    "isValid": false,
+    "modelErrors": {
+        "HasCropProductionData.HasAgriCrop[0].LandManagement": [
+            "landManagement is required"
+        ],
+        "HasCropProductionData.HasAgriCrop[0].CropDuration": [
+            "cropDuration is required"
+        ],
+        "HasCropProductionData.HasAgriCrop[0].SoilType": [
+            "soilType must be between 1 and 10"
+        ],
+        "HasCropProductionData.HasAgriCrop[0].HasAgriParcel[0].MainCrop": [
+            "mainCrop is required"
+        ],
+        "HasCropProductionData.HasAgriCrop[0].HasAgriParcel[0].CropDuration": [
+            "cropDuration is required"
+        ],
+        "HasCropProductionData.HasAgriCrop[0].HasAgriParcel[0].LandManagement": [
+            "landManagement is required"
+        ],
+        "HasCropProductionData.HasAgriCrop[0].HasAgriParcel[0].HasArea": [
+            "hasArea is required"
+        ],
+        "HasCropProductionData.HasAgriCrop[0].HasAgriParcel[0].SoilTexture": [
+            "soilTexture is required"
+        ],
+        "HasCropProductionData.HasAgriCrop[0].HasAgriParcel[0].CoverCrop": [
+            "coverCrop is required"
+        ],
+        "HasCropProductionData.HasAgriCrop[0].HasAgriParcel[0].HadCoverCropYield": [
+            "hadCoverCropYield is required"
+        ],
+        "HasCropProductionData.HasAgriCrop[0].HasAgriParcel[0].SoilErosionSensibilityCode": [
+            "soilErosionSensibilityCode is required"
+        ],
+        "HasCropProductionData.HasAgriCrop[0].HasAgriParcel[0].Permanent": [
+            "permanent is required"
+        ],
+        "HasCropProductionData.HasAgriCrop[0].HasAgriParcel[0].Management": [
+            "management is required"
+        ],
+        "HasCropProductionData.HasAgriCrop[0].HasAgriParcel[0].IsIrrigationApplied": [
+            "isIrrigationApplied is required"
+        ],
+        "HasCropProductionData.HasAgriCrop[0].HasAgriParcel[0].IsLimed": [
+            "isLimed is required"
+        ],
+        "HasCropProductionData.HasAgriParcel[0].MainCrop": [
+            "mainCrop is required"
+        ],
+        "HasCropProductionData.HasAgriParcel[0].CropDuration": [
+            "cropDuration is required"
+        ],
+        "HasCropProductionData.HasAgriParcel[0].LandManagement": [
+            "landManagement is required"
+        ],
+        "HasCropProductionData.HasAgriParcel[0].SoilTexture": [
+            "soilTexture is required"
+        ],
+        "HasCropProductionData.HasAgriParcel[0].SoilErosionSensibilityCode": [
+            "soilErosionSensibilityCode is required"
+        ],
+        "HasCropProductionData.HasAgriParcel[0].Permanent": [
+            "permanent is required"
+        ],
+        "HasCropProductionData.HasAgriParcel[0].Management": [
+            "management is required"
+        ],
+        "HasCropProductionData.HasAgriParcel[0].IsIrrigationApplied": [
+            "isIrrigationApplied is required"
+        ],
+        "HasCropProductionData.HasAgriParcel[0].IsLimed": [
+            "isLimed is required"
+        ]
+    },
+    "consultId": null
+}
