@@ -1,24 +1,27 @@
 {
-    "@context": [        
+    "@context": [
         "https://w3id.org/ocsm/main-context.jsonld",
-        {   "@vocab": "https://w3id.org/demeter/agri/ext/klimrek/",             
-            "v-unit": "http://qudt.org/vocab/unit/", 
-            "cf":"https://vocab.nerc.ac.uk/standard_name/", 
-            "hestia":"https://www.hestia.earth/schema/",
+        {
+            "@vocab": "https://w3id.org/demeter/agri/ext/klimrek/",
+            "v-unit": "http://qudt.org/vocab/unit/",
+            "cf": "https://vocab.nerc.ac.uk/standard_name/",
+            "hestia": "https://www.hestia.earth/schema/",
             "monthlyDosage": {
                 "@id": "https://w3id.org/demeter/agri/ext/klimrek/monthlyDosage",
                 "@type": "@json"
             }
         }
-    ],            
+    ],
     "@id": "urn:klimrek:consultation:6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-    "type":"SustainabilityConsultation",
+    "type": "SustainabilityConsultation",
     "dateModified": "0001-01-01T00:00:00",
     "rScriptVersion": "1.0",
     "identifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
     "isDashboardPublic": false,
     "isScenarioAnalysis": true,
     "isAccessibleToFarmer": true,
+    "isClimateScan": true,
+    "isWaterScan": true,
     "name": "Rijenbemesting Aardappelen - 10% stikstof uit kunstmest",
     "nationalID": "0123456789",
     "hasStartDatetime": "2023-12-18T00:00:00",
@@ -30,141 +33,172 @@
     "notes": null,
     "hasCropProductionData": {
         "@id": "urn:klimrek:consultation:cropProduction:6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-        "type": ["CropProduction","hestia:Cycle"],
+        "type": [
+            "CropProduction",
+            "hestia:Cycle"
+        ],
         "identifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-        "hasAgriCrop":[
+        "hasAgriCrop": [
             {
                 "@id": "urn:klimrek:consultation:cropProduction:crop:6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-                "type": ["Crop","hestia:Product"],
+                "type": [
+                    "Crop",
+                    "hestia:Product"
+                ],
                 "identifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                 "productionDataIdentifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                 "hasAgriParcel": [
                     {
                         "@id": "urn:klimrek:consultation:cropProduction:crop:Parcel:6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-                        "type": ["Parcel","hestia:Site"],
+                        "type": [
+                            "Parcel",
+                            "hestia:Site"
+                        ],
                         "identifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                         "parcelNumber": 0,
                         "name": "name",
-                        "phosphateClass": "",
-                        "soilType": 0
+                        "phosphateClass": "1",
+                        "soilType": 1,
+                        "HarvestMethod": "Korrel",
+                        "mainCrop": "Wortel",
+                        "permanent": "string",
+                        "management": "Conventional",
+                        "landManagement": "Conventional",
+                        "cropDuration": "Annual",
+                        "hasArea": 14.51,
+                        "soilTexture": "Loam",
+                        "coverCrop": "Geen",
+                        "hadCoverCropYield": false,
+                        "soilErosionSensibilityCode": "Low",
+                        "isIrrigationApplied": true,
+                        "isLimed": false
                     }
                 ],
-                "name":"Wortel (niet-vroege) (consumptie) - vers (9535)",
+                "irrigation": {
+                    "isIrrigationApplied": false,
+                    "irrigationAmount": 0,
+                    "irrigationAmountUnit": "m3/ha"
+                },
+                "name": "Wortel (niet-vroege) (consumptie) - vers (9535)",
                 "cropGroupName": "Groenten",
                 "codeVA": 9535,
-                "landManagement":"",
-                "cropDuration":"",
-                "harvestMethod":null,
-                "cloverPercent":null,
+                "landManagement": "Conventional",
+                "cropDuration": "Annual",
+                "harvestMethod": "Korrel",
+                "cloverPercent": null,
                 "cropInformation": null,
-                "hasTotalCropArea": {                    
-			        "numericValue": 38.68,
-			        "unit": "v-unit:HA"
-                },                    
+                "hasTotalCropArea": {
+                    "numericValue": 38.68,
+                    "unit": "v-unit:HA"
+                },
                 "isBio": false,
                 "variety": null,
-                "hasYieldDeliveredNotStored":{                    
-			        "numericValue": 295320,
-			        "unit": "v-unit:KiloGM-PER-HA"
+                "hasYieldDeliveredNotStored": {
+                    "numericValue": 295320,
+                    "unit": "v-unit:KiloGM-PER-HA"
                 },
-                "hasYieldDeliveredStored":{                    
-			        "numericValue": 1568000,
-			        "unit": "v-unit:KiloGM-PER-HA"
+                "hasYieldDeliveredStored": {
+                    "numericValue": 1568000,
+                    "unit": "v-unit:KiloGM-PER-HA"
                 },
-                "isYieldAnEstimation":false,
+                "isYieldAnEstimation": false,
                 "harvestResiduesDestination": null,
                 "Opbrengst": 70000,
-                "hasYieldSold": {                    
-			        "numericValue": 70000,
-			        "unit": "v-unit:KiloGM-PER-HA"
+                "hasYieldSold": {
+                    "numericValue": 70000,
+                    "unit": "v-unit:KiloGM-PER-HA"
                 },
                 "isFullYieldSold": true,
                 "dryMaterialPercent": null,
-                "hasYieldHayStraw":{                    
-			        "numericValue": 10,
-			        "unit": "Hay-PER-Straw"
+                "hasYieldHayStraw": {
+                    "numericValue": 10,
+                    "unit": "Hay-PER-Straw"
                 },
-                "hasTotalHayedArea": {                    
-			        "numericValue": 10,
-			        "unit": "v-unit:HA"
+                "hasTotalHayedArea": {
+                    "numericValue": 10,
+                    "unit": "v-unit:HA"
                 },
-                "isFullYieldHayStrawSold":false,
-                "hasYieldHayStrawSold": {                    
-			        "numericValue": 10,
-			        "unit": "v-unit:HA"
+                "isFullYieldHayStrawSold": false,
+                "hasYieldHayStrawSold": {
+                    "numericValue": 10,
+                    "unit": "v-unit:HA"
                 },
-                "hasSeedPropagation": {                    
-			        "numericValue": 1.4,
-			        "unit": "v-unit:KiloGM-PER-HA"
+                "hasSeedPropagation": {
+                    "numericValue": 1.4,
+                    "unit": "v-unit:KiloGM-PER-HA"
                 },
-                "seedType":null,
-                "hasLimingDose": {                    
-			        "numericValue": 1,
-			        "unit": "v-unit:KiloGM-PER-HA"
+                "seedType": null,
+                "hasLimingDose": {
+                    "numericValue": 1,
+                    "unit": "v-unit:KiloGM-PER-HA"
                 },
-                "limeApplicationFrequencyInYears":1,
-                "soilType":0,
+                "limeApplicationFrequencyInYears": 1,
+                "soilType": 1,
                 "phosphateClass": 1,
-                "isFoliageBurn":false,
+                "isFoliageBurn": false,
                 "foliageBurnEnergySource": null,
-                "consumedEnergyForFoliageBurn":{                    
-			        "numericValue": 1,
-			        "unit": "v-unit:L"
-                },
-                "isIrrigationApplied":true,
-                "usedWaterForIrrigation":{                    
-			        "numericValue": 30904000,
-			        "unit": "v-unit:L"
+                "consumedEnergyForFoliageBurn": {
+                    "numericValue": 1,
+                    "unit": "v-unit:L"
                 },
                 "hasOperation": [
                     {
                         "@id": "urn:klimrek:consultation:cropProduction:Operation:ff7a537d-3369-4438-bb36-f0b9f61bb4ab",
-                        "type":["Operation","hestia:Practice"],
+                        "type": [
+                            "Operation",
+                            "hestia:Practice"
+                        ],
                         "identifier": "ff7a537d-3369-4438-bb36-f0b9f61bb4ab",
-                        "cropIdentifier":"85f78ac7-a428-4639-8943-04e6129c4435",
-                        "transportDetailsIdentifier":null,
+                        "cropIdentifier": "85f78ac7-a428-4639-8943-04e6129c4435",
+                        "transportDetailsIdentifier": null,
                         "name": "Spuiten (gedragen toestel)",
                         "contractorExecutionCode": null,
-                        "consumedFuel": {                            
-			                "numericValue": 1,
-			                "unit": "v-unit:L"
+                        "consumedFuel": {
+                            "numericValue": 1,
+                            "unit": "v-unit:L"
                         },
-                        "numberOfPasses":0,
-                        "isCustomized":false
+                        "numberOfPasses": 0,
+                        "isCustomized": false
                     }
                 ],
-                "hasOperationWithTransport":{                                        
+                "hasOperationWithTransport": {
                     "@id": "urn:klimrek:consultation:cropProduction:OperationWithTransport:ff7a537d-3369-4438-bb36-f0b9f61bb4ac",
-                    "type":["OperationWithTransport","hestia:Practice"],
+                    "type": [
+                        "OperationWithTransport",
+                        "hestia:Practice"
+                    ],
                     "identifier": "ff7a537d-3369-4438-bb36-f0b9f61bb4ac",
-                    "cropIdentifier":"85f78ac7-a428-4639-8943-04e6129c4435",
-                    "transportDetailsIdentifier":null,
+                    "cropIdentifier": "85f78ac7-a428-4639-8943-04e6129c4435",
+                    "transportDetailsIdentifier": null,
                     "name": "Spuiten (gedragen toestel)",
                     "contractorExecutionCode": null,
-                    "consumedFuel": {                        
+                    "consumedFuel": {
                         "numericValue": 1,
                         "unit": "v-unit:L"
                     },
-                    "numberOfPasses":0,
-                    "isCustomized":false,
+                    "numberOfPasses": 0,
+                    "isCustomized": false,
                     "numberOfTransports": 0,
-                    "madeTotalDistance":{                        
-			            "numericValue": 1,
-			            "unit": "v-unit:KiloM"
+                    "madeTotalDistance": {
+                        "numericValue": 1,
+                        "unit": "v-unit:KiloM"
                     }
                 },
-                "hasFertilizationOperation":[
+                "hasFertilizationOperation": [
                     {
                         "@id": "urn:klimrek:consultation:cropProduction:FertilizationOperation:fd302fee-14f8-4dc7-975a-756f3457c2d9",
-                        "type":["FertilizationOperation","hestia:Practice"],
+                        "type": [
+                            "FertilizationOperation",
+                            "hestia:Practice"
+                        ],
                         "identifier": "fd302fee-14f8-4dc7-975a-756f3457c2d9",
-                        "cropIdentifier":"85f78ac7-a428-4639-8943-04e6129c4435",
-                        "hasApplicationMethod":"Kunstmeststrooier",
-                        "applicationFrequencyInYears":1,                        
+                        "cropIdentifier": "85f78ac7-a428-4639-8943-04e6129c4435",
+                        "hasApplicationMethod": "Kunstmeststrooier",
+                        "applicationFrequencyInYears": 1,
                         "NValue": 7.0,
                         "PValue": 3.5,
                         "KValue": 22.5,
-                        "monthlyDosage":{
+                        "monthlyDosage": {
                             "0": 0,
                             "1": 0,
                             "2": 0,
@@ -178,56 +212,68 @@
                             "10": 0,
                             "11": 0
                         },
-                        "dosageUnit": "v-unit:KiloGM-PER-HA",                                                
-                        "usesFertilizer":{
+                        "dosageUnit": "v-unit:KiloGM-PER-HA",
+                        "usesFertilizer": {
                             "@id": "urn:klimrek:consultation:cropProduction:FertilizationOperation:Fertilizer:fd302fee-14f8-4dc7-975a-756f3457c2d9",
-                            "type":["Fertilizer","hestia:Input"],                            
+                            "type": [
+                                "Fertilizer",
+                                "hestia:Input"
+                            ],
                             "name": "Ammonia"
-                        }                            
+                        }
                     }
                 ],
-                "hasCropPropectionOperation":[
+                "hasCropPropectionOperation": [
                     {
                         "@id": "urn:klimrek:consultation:cropProduction:CropPropectionOperation:9dd91bdc-3ce3-45fe-bcb0-ef8088ff934c",
-                        "type":["CropProtectionOperation","hestia:Practice"],
+                        "type": [
+                            "CropProtectionOperation",
+                            "hestia:Practice"
+                        ],
                         "identifier": "9dd91bdc-3ce3-45fe-bcb0-ef8088ff934c",
-                        "cropIdentifier":"4c208389-b7b2-41fe-a05c-aadb0ed49284",
+                        "cropIdentifier": "4c208389-b7b2-41fe-a05c-aadb0ed49284",
                         "productName": "BASAGRAN SG",
-                        "hasActiveIngredientConcentration":{                            
-			                "numericValue": 1,
-			                "unit": "v-unit:GM-PER-L"
+                        "hasActiveIngredientConcentration": {
+                            "numericValue": 1,
+                            "unit": "v-unit:GM-PER-L"
                         },
-                        "hasAppliedAmount":{                            
-			                "numericValue": 0.6,
-			                "unit": "v-unit:KiloGM-PER-HA"
-                        }                        
+                        "hasAppliedAmount": {
+                            "numericValue": 0.6,
+                            "unit": "v-unit:KiloGM-PER-HA"
+                        }
                     }
                 ],
-                "hasOtherEnergySource":[
+                "hasOtherEnergySource": [
                     {
                         "@id": "urn:klimrek:consultation:cropProduction:OtherEnergySource:88e2ba65-c238-4948-a161-610a78a366b3",
-                        "type":["EnergySource","hestia:Input"],
+                        "type": [
+                            "EnergySource",
+                            "hestia:Input"
+                        ],
                         "identifier": "88e2ba65-c238-4948-a161-610a78a366b3",
                         "energyManagementId": null,
                         "cropIdentifier": "eb6b789f-6a21-466f-bef8-a727b885af8a",
                         "typeName": "Diesel",
-                        "hasComsumptionPerYear":{                            
-			                "numericValue": 6600,
-			                "unit": "v-unit:L"
-                        },                                                
+                        "hasComsumptionPerYear": {
+                            "numericValue": 6600,
+                            "unit": "v-unit:L"
+                        },
                         "applicationDescription": []
                     }
                 ],
-                "hasStorageDetails":[
+                "hasStorageDetails": [
                     {
                         "@id": "urn:klimrek:consultation:cropProduction:StorageDetails:22d642ca-f55b-428d-9d56-01b2f8509834",
-                        "type":"StorageDetails",
+                        "type": "StorageDetails",
                         "identifier": "22d642ca-f55b-428d-9d56-01b2f8509834",
                         "storageId": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                         "cropIdentifier": "eb6b789f-6a21-466f-bef8-a727b885af8a",
-                        "hasStorageInfrastructure":{
+                        "hasStorageInfrastructure": {
                             "@id": "urn:klimrek:consultation:cropProduction:StorageDetails:StorageInfrastructure:0acc5e79-e475-491e-ae70-9efe44c2bdd5",
-                            "type":["StorageInfrastructure","hestia:Infrastructure"],
+                            "type": [
+                                "StorageInfrastructure",
+                                "hestia:Infrastructure"
+                            ],
                             "identifier": "0acc5e79-e475-491e-ae70-9efe44c2bdd5",
                             "storageId": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                             "name": "2 cellen K",
@@ -235,222 +281,261 @@
                             "climateControlInfo": "mechanische koeling",
                             "fanType": "AC",
                             "energySource": null,
-                            "consumedEnergy": {                                
-			                    "numericValue": 105000,
-			                    "unit": "v-unit:KiloW-HR"
-                            }                            
+                            "consumedEnergy": {
+                                "numericValue": 105000,
+                                "unit": "v-unit:KiloW-HR"
+                            }
                         },
-                        "hasQuantityStored":{                            
+                        "hasQuantityStored": {
                             "numericValue": 400000,
                             "unit": "v-unit:KiloGM"
                         },
-                        "deliveredNetQuantity":{                            
+                        "deliveredNetQuantity": {
                             "numericValue": 380000,
                             "unit": "v-unit:KiloGM"
                         },
-                        "hasMaxStorageTimeLimit": {                            
+                        "hasMaxStorageTimeLimit": {
                             "numericValue": 7,
                             "unit": "v-unit:DAY"
                         },
-                        "hasSproutInhibitor":[
+                        "hasSproutInhibitor": [
                             {
                                 "@id": "urn:klimrek:consultation:cropProduction:StorageDetails:SproutInhibitor:9dd91bdc-3ce3-45fe-bcb0-ef8088ff934c",
-                                "type": ["SproutInhibitor","hestia:Input"],
+                                "type": [
+                                    "SproutInhibitor",
+                                    "hestia:Input"
+                                ],
                                 "identifier": "9dd91bdc-3ce3-45fe-bcb0-ef8088ff934c",
                                 "storageDetailsId": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                                 "productName": "BASAGRAN SG",
-                                "hasActiveIngredientConcentration":{                                    
+                                "hasActiveIngredientConcentration": {
                                     "numericValue": 7,
                                     "unit": "v-unit:GM-PER-L"
                                 },
-                                "hasAppliedAmount":{                                    
-			                        "numericValue": 0.6,
-			                        "unit": "v-unit:KiloGM-PER-HA"
-                                }                                                                                                                                                    
+                                "hasAppliedAmount": {
+                                    "numericValue": 0.6,
+                                    "unit": "v-unit:KiloGM-PER-HA"
+                                }
                             }
-                        ]                        
+                        ]
                     }
                 ]
-
             }
         ],
         "hasAgriParcel": [
             {
                 "@id": "urn:klimrek:consultation:cropProduction:Parcel:6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-                "type": ["Parcel","hestia:Site"],
+                "type": [
+                    "Parcel",
+                    "hestia:Site"
+                ],
                 "identifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                 "cropIdentifier": "85f78ac7-a428-4639-8943-04e6129c4435",
                 "productionDataIdentifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                 "parcelNumber": 0,
                 "name": "name",
-                "mainCrop": "",
-                "cropDuration": "",
-                "landManagement": "",
+                "mainCrop": "Wortel",
+                "permanent": "string",
+                "management": "Conventional",
+                "landManagement": "Conventional",
                 "harvestMethod": "Korrel",
+                "cropDuration": "Annual",
                 "cropInformation": null,
                 "hasArea": 14.51,
-                "soilTexture": "",
+                "soilTexture": "Loam",
                 "coverCrop": "Geen",
                 "hadCoverCropYield": false,
-                "soilErosionSensibilityCode": "",
-                "phosphateClass": "",
-                "soilType": 0
+                "soilErosionSensibilityCode": "Low",
+                "phosphateClass": "1",
+                "soilType": 1,
+                "isIrrigationApplied": true,
+                "usedWaterForIrrigation": {
+                    "numericValue": 0,
+                    "unit": "v-unit:L"
+                },
+                "isLimed": false,
+                "limeApplicationFrequencyInYears": 0
             }
         ],
         "calculateCarbonStorage": false,
         "hasSoilAnalysis": [
             {
                 "@id": "urn:klimrek:consultation:cropProduction:soilAnalysis:6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-                "type": ["ObservationCollection", "SoilAnalysis"],
+                "type": [
+                    "ObservationCollection",
+                    "SoilAnalysis"
+                ],
                 "identifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-                "productionDataIdentifier":"6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-                "linkedFileId":"6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-                "parcelIdentifier":"6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
+                "productionDataIdentifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
+                "linkedFileId": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
+                "parcelIdentifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                 "analysisDate": "2022-01-01T00:00:00",
-                "hasSamplingDepth": {                    
-			        "numericValue": 6,
-			        "unit": "v-unit:CentiM"		                            
+                "hasSamplingDepth": {
+                    "numericValue": 6,
+                    "unit": "v-unit:CentiM"
                 },
                 "hasMember": [
                     {
                         "@id": "urn:klimrek:consultation:cropProduction:soilAnalysis:Ph:6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-                        "type": ["Observation","hestia:Measurement"],                
+                        "type": [
+                            "Observation",
+                            "hestia:Measurement"
+                        ],
                         "name": "Ph",
-                        "observedProperty":"cf:soil_water_ph",
-                        "hasSimpleResult" : 45                    
+                        "observedProperty": "cf:soil_water_ph",
+                        "hasSimpleResult": 45
                     },
                     {
                         "@id": "urn:klimrek:consultation:cropProduction:soilAnalysis:orgmat:6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-                        "type": ["Observation","hestia:Measurement"],                
-                        "name": "percentage of organic material",                
-                        "observedProperty":"cf:mass_fraction_of_organic_matter_in_soil",
-                        "hasSimpleResult" : 30                    
+                        "type": [
+                            "Observation",
+                            "hestia:Measurement"
+                        ],
+                        "name": "percentage of organic material",
+                        "observedProperty": "cf:mass_fraction_of_organic_matter_in_soil",
+                        "hasSimpleResult": 30
                     }
                 ]
-            }            
+            }
         ],
         "notes": null,
-        "cropsRemarks":null
+        "cropsRemarks": null
     },
-    "hasStorageData" :{
+    "hasStorageData": {
         "@id": "urn:klimrek:consultation:storage:6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-        "type":"Storage",
-        "identifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",        
+        "type": "Storage",
+        "identifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
         "isStorageApplied": true,
-        "hasAnnualEnergyConsumption": {            
+        "hasAnnualEnergyConsumption": {
             "numericValue": 310000,
-            "unit": "v-unit:KiloW-HR"			                            
+            "unit": "v-unit:KiloW-HR"
         },
         "includesPrivateEnergyConsumption": true,
-        "hasAnnualEnergyPrivateConsumption": {            
+        "hasAnnualEnergyPrivateConsumption": {
             "numericValue": 4,
-            "unit": "v-unit:KiloW-HR"			                            
-        },        
-        "includesSideActivitiesEnergyConsumption": false,
-        "hasAnnualEnergySideActivitiesConsumption": {            
-            "numericValue": 4,
-            "unit": "v-unit:KiloW-HR"	
-        },        
-        "includesRenewableEnergy": false, 
-        "hasAnnualEnergySelfProduced": {            
-            "numericValue": 31000,
-            "unit": "v-unit:KiloW-HR"	
+            "unit": "v-unit:KiloW-HR"
         },
-        "percentageOfEnergyUsedForIrrigation":0,        
+        "includesSideActivitiesEnergyConsumption": false,
+        "hasAnnualEnergySideActivitiesConsumption": {
+            "numericValue": 4,
+            "unit": "v-unit:KiloW-HR"
+        },
+        "includesRenewableEnergy": false,
+        "hasAnnualEnergySelfProduced": {
+            "numericValue": 31000,
+            "unit": "v-unit:KiloW-HR"
+        },
+        "percentageOfEnergyUsedForIrrigation": 0,
         "hasSelfProducedEnergySource": [
             {
                 "@id": "urn:klimrek:consultation:StorageData:SelfProducedEnergySource:cedcdd73-c2e8-4a0c-9ec6-a30feba7a938",
-                "type": ["SelfProducedEnergySource","EnergySource","hestia:Input"],
+                "type": [
+                    "SelfProducedEnergySource",
+                    "EnergySource",
+                    "hestia:Input"
+                ],
                 "identifier": "cedcdd73-c2e8-4a0c-9ec6-a30feba7a938",
-                "energyManagementId":null,
-                "storageId":"6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
+                "energyManagementId": null,
+                "storageId": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                 "description": "Zonnepanelen",
-                "hasEnergyProduction":{                    
+                "hasEnergyProduction": {
                     "numericValue": 117000,
-                    "unit": "v-unit:KiloW-HR"	
-                }                                                                                
+                    "unit": "v-unit:KiloW-HR"
+                }
             }
-        ],        
+        ],
         "hasStorageInfrastructure": [
             {
                 "@id": "urn:klimrek:consultation:storage:StorageInfrastructure:0acc5e79-e475-491e-ae70-9efe44c2bdd5",
-                "type":["StorageInfrastructure","hestia:Infrastructure"],
-                "identifier": "0acc5e79-e475-491e-ae70-9efe44c2bdd5",                                        
+                "type": [
+                    "StorageInfrastructure",
+                    "hestia:Infrastructure"
+                ],
+                "identifier": "0acc5e79-e475-491e-ae70-9efe44c2bdd5",
                 "storageId": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                 "name": "2 cellen K",
-                "typeName":"Bewaring",
-                "climateControlInfo": "mechanische koeling",                                
+                "typeName": "Bewaring",
+                "climateControlInfo": "mechanische koeling",
                 "fanType": "AC",
                 "energySource": null,
-                "consumedEnergy": {                    
+                "consumedEnergy": {
                     "numericValue": 105000,
                     "unit": "v-unit:KiloW-HR"
-                }                
+                }
             }
         ],
         "hasStorageDetails": [
             {
                 "@id": "urn:klimrek:consultation:storage:StorageDetails:22d642ca-f55b-428d-9d56-01b2f8509834",
-                "type":"StorageDetails",
-                "identifier": "22d642ca-f55b-428d-9d56-01b2f8509834",                                
+                "type": "StorageDetails",
+                "identifier": "22d642ca-f55b-428d-9d56-01b2f8509834",
                 "storageId": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                 "cropIdentifier": "eb6b789f-6a21-466f-bef8-a727b885af8a",
-                "hasStorageInfrastructure":{
+                "hasStorageInfrastructure": {
                     "@id": "urn:klimrek:consultation:storage:StorageDetails:StorageInfrastructure:ebc8c81a-bf55-4f9d-8521-d880bb6c333e",
-                    "type":["StorageInfrastructure","hestia:Infrastructure"],
-                    "identifier": "ebc8c81a-bf55-4f9d-8521-d880bb6c333e", 
+                    "type": [
+                        "StorageInfrastructure",
+                        "hestia:Infrastructure"
+                    ],
+                    "identifier": "ebc8c81a-bf55-4f9d-8521-d880bb6c333e",
                     "storageId": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                     "name": "Loods 1",
                     "typeName": "Bewaring",
                     "climateControlInfo": "mechanisch geventileerd",
                     "fanType": "AC",
                     "energySource": null,
-                    "consumedEnergy": {                        
+                    "consumedEnergy": {
                         "numericValue": 11800,
                         "unit": "v-unit:KiloW-HR"
                     }
                 },
-                "hasQuantityStored": {                    
+                "hasQuantityStored": {
                     "numericValue": 400000,
                     "unit": "v-unit:KiloGM"
                 },
-                "deliveredNetQuantity": {                    
+                "deliveredNetQuantity": {
                     "numericValue": 380000,
                     "unit": "v-unit:KiloGM"
                 },
-                "hasMaxStorageTimeLimit":{                    
+                "hasMaxStorageTimeLimit": {
                     "numericValue": 7,
                     "unit": "v-unit:DAY"
                 },
                 "hasSproutInhibitor": [
                     {
                         "@id": "urn:klimrek:consultation:storage:StorageDetails:SproutInhibitor:9dd91bdc-3ce3-45fe-bcb0-ef8088ff934c",
-                        "type": ["SproutInhibitor","hestia:Input"],
+                        "type": [
+                            "SproutInhibitor",
+                            "hestia:Input"
+                        ],
                         "identifier": "9dd91bdc-3ce3-45fe-bcb0-ef8088ff934c",
                         "storageDetailsId": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                         "productName": "BASAGRAN SG",
-                        "hasActiveIngredientConcentration": {                            
+                        "hasActiveIngredientConcentration": {
                             "numericValue": 1,
-			                "unit": "v-unit:GM-PER-L"
-                        },                                                                                
-                        "hasAppliedAmount": {                            
+                            "unit": "v-unit:GM-PER-L"
+                        },
+                        "hasAppliedAmount": {
                             "numericValue": 0.6,
-			                "unit": "v-unit:KiloGM-PER-HA"
-                        }                        
+                            "unit": "v-unit:KiloGM-PER-HA"
+                        }
                     }
                 ]
             }
         ]
     },
-    "hasFarmInfrastructure":{
+    "hasFarmInfrastructure": {
         "@id": "urn:klimrek:consultation:FarmInfrastructure:6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-        "type":"FarmInfrastructure",
+        "type": "FarmInfrastructure",
         "identifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
         "hasAgricultureMachine": [
             {
                 "@id": "urn:klimrek:consultation:FarmInfrastructure:AgricultureMachine:ed8775bc-7ea1-4d5f-8a2b-1ee794baa51c",
-                "type": ["AgriculturalMachine","hestia:Infrastructure"],
-                "identifier": "ed8775bc-7ea1-4d5f-8a2b-1ee794baa51c",                                
+                "type": [
+                    "AgriculturalMachine",
+                    "hestia:Infrastructure"
+                ],
+                "identifier": "ed8775bc-7ea1-4d5f-8a2b-1ee794baa51c",
                 "farmInfrastructureId": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                 "typeName": "artec F40",
                 "constructionYear": 2013,
@@ -458,28 +543,34 @@
             }
         ]
     },
-    "hasWaterUsageData":{
+    "hasWaterUsageData": {
         "@id": "urn:klimrek:consultation:WaterUsageData:6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
-        "type": ["WaterUsage","hestia:Practice"],
+        "type": [
+            "WaterUsage",
+            "hestia:Practice"
+        ],
         "identifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
         "hasWaterSourceUsage": [
             {
                 "@id": "urn:klimrek:consultation:WaterUsageData:370bb97a-7378-4f13-b4b9-09e0f180b8be",
-                "type": ["WaterSourceUsage","hestia:Input"],
+                "type": [
+                    "WaterSourceUsage",
+                    "hestia:Input"
+                ],
                 "identifier": "370bb97a-7378-4f13-b4b9-09e0f180b8be",
-                "waterUsageIdentifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",                                
+                "waterUsageIdentifier": "6c2f28da-9b5c-41f1-9e6a-16dc036998cd",
                 "name": "Leidingwater/Stadswater",
                 "isTotalConsumptionKnown": true,
-                "hasTotalConsumption": {                    
+                "hasTotalConsumption": {
                     "numericValue": 512,
                     "unit": "v-unit:L"
                 },
-                "hasArea": null,                                
+                "hasArea": null,
                 "areValuesEstimated": false,
                 "percentageUsedForIrrigation": 0,
                 "applicationDescription": [
                     "Reiniging machines en stal"
-                ]                
+                ]
             }
         ]
     }
